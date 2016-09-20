@@ -17,43 +17,43 @@ skin_disorders = []
 minerals = []
 mineral_modifiers = []
 
-with open('animals.txt', 'r') as f:
+with open('lists/animals.txt', 'r') as f:
     animals = f.readlines()
 
-with open('animal_parts.txt', 'r') as f:
+with open('lists/animal_parts.txt', 'r') as f:
     animal_parts = f.readlines()
 
-with open('inf_diseases.txt', 'r') as f:
+with open('lists/inf_diseases.txt', 'r') as f:
     inf_diseases = f.readlines()
 
-with open('viruses_filtered.txt', 'r') as f:
+with open('lists/viruses_filtered.txt', 'r') as f:
     viruses = f.readlines()
 
-with open('plants.txt', 'r') as f:
+with open('lists/plants.txt', 'r') as f:
     plants = f.readlines()
 
-with open('plant_parts.txt', 'r') as f:
+with open('lists/plant_parts.txt', 'r') as f:
     plant_parts = f.readlines()
 
-with open('part_modifiers.txt', 'r') as f:
+with open('lists/part_modifiers.txt', 'r') as f:
     part_modifiers = f.readlines()
 
-with open('liquids.txt', 'r') as f:
+with open('lists/liquids.txt', 'r') as f:
     liquids = f.readlines()
 
-with open('neuro.txt', 'r') as f:
+with open('lists/neuro.txt', 'r') as f:
     neuro = f.readlines()
 
-with open('disorders.txt', 'r') as f:
+with open('lists/disorders.txt', 'r') as f:
     disorders = f.readlines()
 
-with open('skin_disorders.txt', 'r') as f:
+with open('lists/skin_disorders.txt', 'r') as f:
     skin_disorders = f.readlines()
 
-with open('minerals.txt', 'r') as f:
+with open('lists/minerals.txt', 'r') as f:
     minerals = f.readlines()
 
-with open('mineral_modifiers.txt', 'r') as f:
+with open('lists/mineral_modifiers.txt', 'r') as f:
     mineral_modifiers = f.readlines()
 
 def get_disorder():

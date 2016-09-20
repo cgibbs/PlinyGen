@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import urllib2
 import re
 
-wiki = "https://en.wikipedia.org/wiki/List_of_neurological_conditions_and_disorders"
+wiki = "https://en.wikipedia.org/wiki/List_of_disorders"
 header = {'User-Agent': 'Mozilla/5.0'} #Needed to prevent 403 error on Wikipedia
 req = urllib2.Request(wiki,headers=header)
 page = urllib2.urlopen(req)
@@ -13,7 +13,7 @@ soup = BeautifulSoup(page, 'html.parser')
 
 uls = soup.find_all("ul")
 
-with open('./neuro.txt', 'w') as f:
+with open('../files/disorders.txt', 'w') as f:
     for ul in uls:
         for item in ul.findAll("li"):
             write_to_file = ""

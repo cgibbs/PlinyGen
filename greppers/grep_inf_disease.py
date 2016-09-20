@@ -13,7 +13,7 @@ soup = BeautifulSoup(page, 'html.parser')
 
 table = soup.find("table", { "class" : "wiki table sortable" })
 
-with open('./inf_diseases.txt', 'w') as f:
+with open('../files/inf_diseases.txt', 'w') as f:
     for row in table.findAll("tr"):
         cells = row.findAll("td")
         write_to_file = ""
