@@ -13,6 +13,7 @@ part_modifiers = []
 liquids = []
 neuro = []
 disorders = []
+skin_disorders = []
 minerals = []
 mineral_modifiers = []
 
@@ -46,14 +47,20 @@ with open('neuro.txt', 'r') as f:
 with open('disorders.txt', 'r') as f:
     disorders = f.readlines()
 
+with open('skin_disorders.txt', 'r') as f:
+    skin_disorders = f.readlines()
+
 with open('minerals.txt', 'r') as f:
     minerals = f.readlines()
 
 with open('mineral_modifiers.txt', 'r') as f:
     mineral_modifiers = f.readlines()
 
-def get_sickness():
+def get_disorder():
     return random.choice(inf_diseases + viruses + neuro + disorders)[0:-1]
+
+def get_skin_disorder():
+    return random.choice(skin_disorders)[0:-1]
 
 def get_animal_ingredient():
     ing = random.choice(part_modifiers)[0:-1]
@@ -91,11 +98,15 @@ def get_random_ingredient():
     return ing
 
 def create_recipe():
-    ing_list = []
+    ing_list = [get_solvent_ingredient()]
+    malady = "To cure "
+    if random.randint(0,1):
+        malady += get_disorder() + ", combine and ingest the following:\n"
+    else:
+        malady += get_skin_disorder() + ", apply a poultice composed of the following:\n"
     for i in range(random.randint(1,6)):
         ing_list.append(get_random_ingredient())
-    print "To cure " + get_sickness() + ", combine and ingest the following:\n" \
-        + get_solvent_ingredient() + '\n' + '\n'.join(ing_list)
+    print malady + '\n'.join(ing_list)
 
 if __name__ == "__main__":
     create_recipe()
