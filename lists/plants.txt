@@ -7,6 +7,7 @@ Speckled alder
 Striped alder
 White alder
 Almond
+Ambrosia
 Tall ambrosia
 Amy root
 Apple
@@ -40,6 +41,7 @@ Bean
 Bearberry
 Bear corn
 Beech
+Bindweed
 Blue bindweed
 Bird's nest
 Bird's nest plant
@@ -84,6 +86,7 @@ False box
 Boxelder
 Boxwood
 False boxwood
+Brier
 Sand brier
 Brittlebush
 Broadleaf
@@ -120,7 +123,7 @@ Wild black cherry
 Chestnut
 Chigger flower
 Chrysanthemum
-Cinnamon
+(True) cinnamon
 Clove
 Clover
 Coakum
@@ -128,7 +131,9 @@ Coconut
 Coffee plant
 Colic weed
 Collard
+Colwort
 Hare's colwort
+Coneflower
 Brilliant coneflower
 Cutleaf coneflower
 Eastern coneflower
@@ -137,6 +142,7 @@ Orange coneflower
 Tall coneflower
 Thin-leaved Coneflower
 Three-leaved Coneflower
+Cornel
 Blueberry cornel
 Silky cornel
 White cornel
@@ -164,6 +170,7 @@ Crowfoot
 Crow's nest
 Crow's toes
 Cucumber
+Daisy
 Brown daisy
 Common daisy, daisy
 Gloriosa daisy
@@ -177,6 +184,7 @@ Devil's bite
 Devil's darning needle
 Devil's nose
 Devil's plague
+Dewberry
 Bristly dewberry
 Swamp dewberry
 Dindle
@@ -199,10 +207,12 @@ Eucalyptus
 Extinguisher moss
 Eytelia
 Fair-maid-of-France
+Fairymoss Azolla caroliniana
 Fellenwort
 Felonwood
 Felonwort
 Fennel
+Ferns
 Boston fern or sword fern
 Christmas fern
 Coast polypody
@@ -216,16 +226,20 @@ Feverbush
 Feverfew
 Fig
 Common fig
+Flax
 European flax
 New Zealand flax
 Fluxroot
+Fumewort
 Yellow fumewort
 Gallberry
 Garget
+Garlic
 Golden garlic
 Wild garlic
 Garlic mustard
 Garlic root
+Gilliflower
 Dame's gilliflower
 Night scented gilliflower
 Queen's gilliflower
@@ -242,6 +256,7 @@ Groundberry
 Bristly groundberry
 Gutweed
 Haldi
+Harlequin
 Rock harlequin
 Yellow harlequin
 Hay fever weed
@@ -297,6 +312,7 @@ Leek
 Lemon
 Lettuce
 Lily leek
+Lilac
 Summer lilac
 Love vine
 Maize
@@ -333,6 +349,7 @@ Whorled milkweed
 Yellow milkweed
 Milky tassel
 Moosewood
+Morel
 Petty morel
 Mosquito plant
 Mother-of-the-evening
@@ -342,9 +359,11 @@ Red mulberry
 White mulberry
 Flowering Dogwood
 Neem
+Nettle - Urtica dioica
 Bull nettle
 Carolina horse nettle
 Horse nettle
+Nightshade
 American nightshade
 Bitter nightshade
 Black nightshade
@@ -355,8 +374,12 @@ Trailing nightshade
 Trailing violet nightshade
 Woody nightshade
 Nosebleed
+Oak tree -Quercus
+Algerian Oak Quercus canariensis
 Blue oak
 Bur oak
+California Black Oak Quercus kelloggii
+Canyon Live Oak Quercus chrysolepis
 Champion oak
 Coast live oak
 Cork oak
@@ -388,11 +411,13 @@ Giant onion
 Nodding onion
 Tree onion
 Wild onion
+Orange-[awr-inj,or-]
 Osage orange
 sweet orange
 Wild orange
 Orange-root
 Osage
+Osier - Salix; (in North America) Cornus
 Red osier
 Parsley
 Parsnip
@@ -400,6 +425,7 @@ Pea
 Peach
 Peanut
 Pear
+Pellitory
 Bastard pellitory
 European pellitory
 Wild pellitory
@@ -410,6 +436,7 @@ Pine
 Pineapple
 Pistachio
 Plane (European sycamore)
+Plantain
 Broadleaf plantain
 Common plantain
 Dooryard plantain
@@ -462,6 +489,7 @@ Redweed
 Rheumatism root
 Rhubarb
 Ribwort
+Rice
 Asian rice
 African rice
 Roadweed
@@ -483,6 +511,7 @@ Rosemary
 Rye
 Saffron crocus
 Sanguinary
+Saskatoon - Amelanchier alnifolia
 Sauce-alone
 Scarlet berry
 Scoke
@@ -503,6 +532,7 @@ Snakeberry
 Snowdrop
 Sorrel
 Redwood sorrel
+Speedwell
 Corn speedwell
 Wall speedwell
 Spoolwood
@@ -514,6 +544,7 @@ Strawberry
 Strawberry tree
 Strawberry tree 'Marina'
 Sugarcane
+Swallow-wort
 Orange swallow-wort
 Silky swallow-wort
 Sneezeweed
@@ -522,6 +553,7 @@ Sunflower
 Sugarplum
 Soldier's woundwort
 Stag bush
+Swallow-wort
 Orange swallow-wort
 Silky swallow-wort
 Sweet potato
@@ -531,6 +563,9 @@ Sycamore
 Sycamore (California)
 Sycamore (Arizona)
 Sycamore (American)
+Sundari (Bangladesh)- "Heritiera fomes"
+Gewa (Bangladesh)- "Excoecaria agallocha"
+Tansy
 Common tansy
 White tansy
 Wild tansy
@@ -587,6 +622,7 @@ Viburnum
 Blackhaw viburnum
 Leatherleaf viburnum
 Violet
+Viola species
 African violet
 Damask violet
 Dame's violet
@@ -617,6 +653,7 @@ Virginia winterberry
 Wintercress
 Early wintercress
 Woodbine
+Wormwood
 Roman wormwood
 Wound rocket
 Yarrow
@@ -627,4 +664,5 @@ Woolly yarrow
 Yellow fieldcress
 Yellowwood
 Yellow coneflower
+Yam - Dioscorea
 Zedoary

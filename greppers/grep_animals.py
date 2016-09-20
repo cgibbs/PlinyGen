@@ -13,7 +13,7 @@ soup = BeautifulSoup(page, 'html.parser')
 
 uls = soup.find_all("ul")
 
-with open('../files/animals.txt', 'w') as f:
+with open('..\\lists\\animals.txt', 'w') as f:
     for ul in uls:
         for item in ul.findAll("li"):
             write_to_file = ""

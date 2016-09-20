@@ -110,5 +110,3 @@ def create_recipe():
 
 if __name__ == "__main__":
     create_recipe()
-    for i in range(0,100):
-        print random.randint(1,6)

@@ -13,7 +13,7 @@ soup = BeautifulSoup(page, 'html.parser')
 
 h3s = soup.find_all("h3", { "class" : "hl-content-listing-title-mobile" })
 
-with open('../files/skin_disorders.txt', 'w') as f:
+with open('..\\lists\\skin_disorders.txt', 'w') as f:
     for h3 in h3s:
         write_to_file = ""
         for i in h3.strings:

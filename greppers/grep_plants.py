@@ -15,12 +15,14 @@ soup = BeautifulSoup(page, 'html.parser')
 
 uls = soup.find_all("ul")
 
-with open('../files/plants.txt', 'w') as f:
+with open('..\\lists\\plants.txt', 'w') as f:
     for ul in uls:
         for item in ul.findAll("li"):
             write_to_file = ""
             for i in item.strings:
                 write_to_file += i
+            if len(write_to_file) < 4:
+                continue
             if '–'.decode('utf-8') in write_to_file:
                 write_to_file = write_to_file[0:write_to_file.find('–'.decode('utf-8'))].strip()
-                f.write(write_to_file.encode('utf-8') + "\n")
+            f.write(write_to_file.encode('utf-8') + "\n")
