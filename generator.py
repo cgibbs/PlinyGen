@@ -85,7 +85,7 @@ def get_mineral_ingredient():
 
 def get_random_ingredient():
     ing = str(random.randint(1,6)) + " parts "
-    ra = random.randint(0,4)
+    ra = random.randint(0,3)
     if ra == 0:
         ing += get_animal_ingredient()
     elif ra == 1:
@@ -110,3 +110,5 @@ def create_recipe():
 
 if __name__ == "__main__":
     create_recipe()
+    for i in range(0,100):
+        print random.randint(1,6)
