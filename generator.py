@@ -19,6 +19,7 @@ mineral_modifiers = []
 rivers = []
 seas = []
 springs = []
+greek_mythos = []
 
 with open('lists/animals.txt', 'r') as f:
     animals = f.readlines()
@@ -68,6 +69,9 @@ with open('lists/seas.txt', 'r') as f:
 with open('lists/springs.txt', 'r') as f:
     springs = f.readlines()
 
+with open('lists/greek_mythos.txt', 'r') as f:
+    greek_mythos = f.readlines()
+
 def get_disorder():
     return random.choice(inf_diseases + viruses + neuro + disorders)[0:-1]
 
@@ -115,12 +119,15 @@ def get_water_ingredient():
     ing = str(random.randint(2,10)) + " parts water from the "
     ra = random.randint(0,2)
     if ra == 0:
-        ing += "river " + random.choice(rivers)[0:-1]
+        ing += "River " + random.choice(rivers)[0:-1]
     elif ra == 1:
         ing += random.choice(seas)[0:-1]
     else:
         ing += random.choice(springs)[0:-1] + " Spring"
     return ing
+
+def get_greek_mythos():
+    return random.choice(greek_mythos)[0:-1]
 
 def create_recipe():
     ing_list = [get_water_ingredient()]
@@ -128,12 +135,17 @@ def create_recipe():
         ing_list.append(get_random_ingredient())
     return '\n'.join(ing_list)
 
+def get_prayer():
+    return "Pray to " + get_greek_mythos() + "."
+
 def create_cure():
     malady = "To cure "
+    prayer = get_prayer()
+    prayer += "\nThen "
     if random.randint(0,1):
-        malady += get_disorder() + ", combine and ingest the following:"
+        malady += get_disorder() + ":\n" + prayer + "combine and ingest the following:"
     else:
-        malady += get_skin_disorder() + ", apply a poultice composed of the following:"
+        malady += get_skin_disorder() + ":\n" + prayer + "apply a poultice composed of the following:"
     malady += '\n' + create_recipe()
     print malady
 

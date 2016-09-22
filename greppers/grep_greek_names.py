@@ -5,23 +5,18 @@ from bs4 import BeautifulSoup
 import urllib2
 import re
 
-wiki = "https://en.wikipedia.org/wiki/List_of_hot_springs#Greece"
+wiki = "http://nameberry.com/baby-names/167/Greek-Names"
 header = {'User-Agent': 'Mozilla/5.0'} #Needed to prevent 403 error on Wikipedia
 req = urllib2.Request(wiki,headers=header)
 page = urllib2.urlopen(req)
 soup = BeautifulSoup(page, 'html.parser')
 
-table = soup.find("table", { "class" : "wikitable" })
+table = soup.find_all("li")
 
-with open('..\\lists\\springs.txt', 'w') as f:
-    for row in table.findAll("tr"):
-        print row
-        cells = row.findAll("td")
-        print cells
+with open('..\\lists\\greek_names.txt', 'w') as f:
+    for cells in table:
         write_to_file = ""
-        if len(cells) == 0:
-            continue
-        for i in cells[0].strings:
-            write_to_file += i
+        for i in cells.strings:
+            write_to_file += i.strip()
         write_to_file += "\n"
         f.write(write_to_file.encode('utf-8'))
