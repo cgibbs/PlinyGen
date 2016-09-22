@@ -16,6 +16,9 @@ disorders = []
 skin_disorders = []
 minerals = []
 mineral_modifiers = []
+rivers = []
+seas = []
+springs = []
 
 with open('lists/animals.txt', 'r') as f:
     animals = f.readlines()
@@ -56,6 +59,15 @@ with open('lists/minerals.txt', 'r') as f:
 with open('lists/mineral_modifiers.txt', 'r') as f:
     mineral_modifiers = f.readlines()
 
+with open('lists/rivers.txt', 'r') as f:
+    rivers = f.readlines()
+
+with open('lists/seas.txt', 'r') as f:
+    seas = f.readlines()
+
+with open('lists/springs.txt', 'r') as f:
+    springs = f.readlines()
+
 def get_disorder():
     return random.choice(inf_diseases + viruses + neuro + disorders)[0:-1]
 
@@ -85,28 +97,45 @@ def get_mineral_ingredient():
 
 def get_random_ingredient():
     ing = str(random.randint(1,6)) + " parts "
-    ra = random.randint(0,3)
-    if ra == 0:
+    ra = random.randint(0, 12)
+    if ra > 9:
         ing += get_animal_ingredient()
-    elif ra == 1:
+    elif ra > 6:
         ing += get_plant_ingredient()
-    elif ra == 2:
+    elif ra > 3:
+        ing += get_mineral_ingredient()
+    elif ra >1:
         # get_solvent does its own "parts" generation, so just assign, don't append
         ing = get_solvent_ingredient()
     else:
-        ing += get_mineral_ingredient()
+        ing = get_water_ingredient()
+    return ing
+
+def get_water_ingredient():
+    ing = str(random.randint(2,10)) + " parts water from the "
+    ra = random.randint(0,2)
+    if ra == 0:
+        ing += "river " + random.choice(rivers)[0:-1]
+    elif ra == 1:
+        ing += random.choice(seas)[0:-1]
+    else:
+        ing += random.choice(springs)[0:-1] + " Spring"
     return ing
 
 def create_recipe():
-    ing_list = [get_solvent_ingredient()]
-    malady = "To cure "
-    if random.randint(0,1):
-        malady += get_disorder() + ", combine and ingest the following:\n"
-    else:
-        malady += get_skin_disorder() + ", apply a poultice composed of the following:\n"
+    ing_list = [get_water_ingredient()]
     for i in range(random.randint(1,6)):
         ing_list.append(get_random_ingredient())
-    print malady + '\n'.join(ing_list)
+    return '\n'.join(ing_list)
+
+def create_cure():
+    malady = "To cure "
+    if random.randint(0,1):
+        malady += get_disorder() + ", combine and ingest the following:"
+    else:
+        malady += get_skin_disorder() + ", apply a poultice composed of the following:"
+    malady += '\n' + create_recipe()
+    print malady
 
 if __name__ == "__main__":
-    create_recipe()
+    create_cure()
