@@ -131,7 +131,7 @@ def get_greek_mythos():
 
 def create_recipe():
     ing_list = [get_water_ingredient()]
-    for i in range(random.randint(1,6)):
+    for i in range(random.randint(1,5)):
         ing_list.append(get_random_ingredient())
     return '\n'.join(ing_list)
 
